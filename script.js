@@ -4,7 +4,7 @@ const books = [
     "country": "Nigeria",
     "imageLink": "images/things-fall-apart.jpg",
     "language": "English",
-    "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
+    "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart",
     "pages": 209,
     "title": "Things Fall Apart",
     "year": 1958
@@ -14,7 +14,7 @@ const books = [
     "country": "Denmark",
     "imageLink": "images/fairy-tales.jpg",
     "language": "Danish",
-    "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
+    "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.",
     "pages": 784,
     "title": "Fairy tales",
     "year": 1836
@@ -24,7 +24,7 @@ const books = [
     "country": "Italy",
     "imageLink": "images/the-divine-comedy.jpg",
     "language": "Italian",
-    "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
+    "link": "https://en.wikipedia.org/wiki/Divine_Comedy",
     "pages": 928,
     "title": "The Divine Comedy",
     "year": 1315
@@ -34,7 +34,7 @@ const books = [
     "country": "Sumer and Akkadian Empire",
     "imageLink": "images/the-epic-of-gilgamesh.jpg",
     "language": "Akkadian",
-    "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n",
+    "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh",
     "pages": 160,
     "title": "The Epic Of Gilgamesh",
     "year": -1700
@@ -44,24 +44,24 @@ const books = [
     "country": "Achaemenid Empire",
     "imageLink": "images/the-book-of-job.jpg",
     "language": "Hebrew",
-    "link": "https://en.wikipedia.org/wiki/Book_of_Job\n",
+    "link": "https://en.wikipedia.org/wiki/Book_of_Job",
     "pages": 176,
     "title": "The Book Of Job",
     "year": -600
   }];
 
-  let tarjetas = `<section>`
+  let tarjetas = `<section id="sectionDiv">`
 
   for (let i = 0; i < books.length; i++) {
-      tarjetas += `<div>
-                      <img src="./${books[i].imageLink}" alt="Fotacas" width="20%">
+      tarjetas += `<img src="./${books[i].imageLink}" alt="Fotacas" width="20%">
+                  <div class="tarjetas">
                       <h2 class="title">${books[i].title}</h2>
                       <p class="author">Author: ${books[i].author}</p>
                       <p class="year">Year: ${books[i].year}</p>
                       <p class="country">Country: ${books[i].country}</p>
                       <p class="pages">Number of pages: ${books[i].pages}</p>
                       <p class="language">Lenguage: ${books[i].language}</p>
-                      <a class="link" href="${books[i].link}">${books[i].link}</a>
+                      <a class="link" href="${books[i].link}">Link</a>
                   </div>`
   }
   
