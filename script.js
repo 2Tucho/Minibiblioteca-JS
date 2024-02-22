@@ -53,7 +53,8 @@ const books = [
   let tarjetas = `<section id="sectionDiv">`
 
   for (let i = 0; i < books.length; i++) {
-      tarjetas += `<img src="./${books[i].imageLink}" alt="Fotacas" width="20%">
+      tarjetas += `<article>
+      <img src="./${books[i].imageLink}" alt="Fotacas" width="20%">
                   <div class="tarjetas">
                       <h2 class="title">${books[i].title}</h2>
                       <p class="author">Author: ${books[i].author}</p>
@@ -62,19 +63,20 @@ const books = [
                       <p class="pages">Number of pages: ${books[i].pages}</p>
                       <p class="language">Lenguage: ${books[i].language}</p>
                       <a class="link" href="${books[i].link}">Link</a>
-                  </div>`
+                  </div>
+                  </article>`
   }
   
       tarjetas += `</section>`;
       document.getElementById('listaLibros').innerHTML = tarjetas;
 
 
-      /*function printTarjetas() {
+      function printTarjetas() {
         for (let i = 0; i < books.length; i++) {
           // CREANDO UN DIV
           const parentDiv = document.createElement("div");
           document.getElementById("listaLibros").appendChild(parentDiv);
-          parentDiv.setAttribute("id", `div${[i]}`)
+          parentDiv.setAttribute("id", `div${i}`)
       
       
           // CREANDO IMG
@@ -82,28 +84,28 @@ const books = [
           childImg.setAttribute("src", `${books[i].imageLink}`);
           childImg.setAttribute("alt", "Fotacas");
           childImg.setAttribute("width", "20%");
-          document.getElementById(`div${[i]}`).appendChild(childImg);
+          document.getElementById(`div${i}`).appendChild(childImg);
       
           // CREANDO TITULO
           const childTitle = document.createElement("h2");
           childTitle.setAttribute("class", "title");
           const childTitle2 = document.createTextNode(`${books[i].title}`)
           childTitle.appendChild(childTitle2);
-          document.getElementById(`div${[i]}`).appendChild(childTitle);
+          document.getElementById(`div${i}`).appendChild(childTitle);
       
           // CREANDO AUTOR
           const childAuthor = document.createElement("p");
           childAuthor.setAttribute("class", "author");
           const childAuthor2 = document.createTextNode(`Author: ${books[i].author}`);
           childAuthor.appendChild(childAuthor2);
-          document.getElementById(`div${[i]}`).appendChild(childAuthor);
+          document.getElementById(`div${i}`).appendChild(childAuthor);
       
           // YEAR
           const childYear = document.createElement("p");
           childYear.setAttribute("class", "year");
           const childYear2 = document.createTextNode(`Year: ${books[i].year}`);
           childYear.appendChild(childYear2);
-          document.getElementById(`div${[i]}`).appendChild(childYear);
+          document.getElementById(`div${i}`).appendChild(childYear);
       
       
           // CREANDO COUNTRY
@@ -111,21 +113,21 @@ const books = [
           childCountry.setAttribute("class", "country");
           const childCountry2 = document.createTextNode(`Country: ${books[i].country}`);
           childCountry.appendChild(childCountry2);
-          document.getElementById(`div${[i]}`).appendChild(childCountry);
+          document.getElementById(`div${i}`).appendChild(childCountry);
       
           // PÁGINAS
           const childPages = document.createElement("p");
           childPages.setAttribute("class", "pages");
           const childPages2 = document.createTextNode(`Number of pages: ${books[i].pages} pg.`);
           childPages.appendChild(childPages2);
-          document.getElementById(`div${[i]}`).appendChild(childPages);
+          document.getElementById(`div${i}`).appendChild(childPages);
       
           // LANGUAGE
           const childLanguage = document.createElement("p");
           childLanguage.setAttribute("class", "language");
           const childLanguage2 = document.createTextNode(`Language: ${books[i].language}`);
           childLanguage.appendChild(childLanguage2);
-          document.getElementById(`div${[i]}`).appendChild(childLanguage);
+          document.getElementById(`div${i}`).appendChild(childLanguage);
       
           // LINK
           const childLink = document.createElement("a");
@@ -133,9 +135,9 @@ const books = [
           childLink.setAttribute("class", "link");
           const childLink2 = document.createTextNode(`${books[i].link}`);
           childLink.appendChild(childLink2);
-          document.getElementById(`div${[i]}`).appendChild(childLink);
+          document.getElementById(`div${i}`).appendChild(childLink);
         }
       
       }
       
-      printTarjetas();*/
+      /*printTarjetas();*/
